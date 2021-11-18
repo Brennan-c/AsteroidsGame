@@ -3,7 +3,7 @@ Star [] sues;
 Spaceship a;
 public void setup() 
 {
-  size(500,500);
+  size(600,600);
   sues = new Star[100];
   for(int i = 0; i< sues.length; i++)
   sues[i] = new Star();
@@ -13,6 +13,19 @@ public void setup()
 public void draw() 
 {
   background(0);
+  if(keyPressed){
+  if(key =='a' || key =='A'){
+    a.turn(-10);
+  }
+  if(key =='d' || key =='D'){
+    a.turn(10);
+  }
+  if(key == 'w' || key =='W'){
+   a.accelerate(0.4); 
+  }
+  }
+  
+  a.move();
   for(int i = 0; i<sues.length;i++)
   sues[i].show();
   a.show();
