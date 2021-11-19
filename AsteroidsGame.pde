@@ -23,6 +23,9 @@ public void draw()
   if(key == 'w' || key =='W'){
    a.accelerate(0.4); 
   }
+  if(key =='h' || key =='H'){
+   a.hyperspace(); 
+  }
   }
   
   a.move();
@@ -30,5 +33,3 @@ public void draw()
   sues[i].show();
   a.show();
   //your code here
-}
-
