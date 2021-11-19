@@ -23,6 +23,8 @@ public void draw()
   if(key == 'w' || key =='W'){
    a.accelerate(0.4); 
   }
+  }
+  public void keyPressed(){
   if(key =='h' || key =='H'){
    a.hyperspace(); 
   }
