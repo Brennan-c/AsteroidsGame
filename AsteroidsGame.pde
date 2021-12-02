@@ -1,6 +1,7 @@
 //your variable declarations here
 Star [] sues;
 Spaceship a;
+Asteroid boom;
 public void setup() 
 {
   size(600,600);
@@ -9,6 +10,7 @@ public void setup()
   sues[i] = new Star();
   a = new Spaceship();
   //your code here
+  boom = new Asteroid();
 }
 public void draw() 
 {
@@ -29,8 +31,10 @@ public void draw()
   }
   
   a.move();
+  boom.move();
   for(int i = 0; i<sues.length;i++)
   sues[i].show();
   a.show();
+  boom.show();
   //your code here
 }
