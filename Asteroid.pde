@@ -10,13 +10,21 @@ class Asteroid extends Floater
     yCorners = new int[]{16,18,0,-10,-13};
     myCenterX = (int)(Math.random()*601);
     myCenterY = (int)(Math.random()*601);
-    myXspeed =(int)(Math.random()*10);
-    myYspeed =(int)(Math.random()*10);
+    myXspeed =(int)(Math.random()*7)-4;
+    myYspeed =(int)(Math.random()*7)-4;
     myPointDirection =0;
   }
   public void move() {
     turn(ASpeed);
     super.move();
   }
-  
+  public void setYspeed(){
+   myYspeed = (int)(Math.random()*7)-4;; 
+  }
+  public void setXspeed(){
+   myXspeed = (int)(Math.random()*7)-4;; 
+  }
+  public void setAspeed(){
+   ASpeed =  (int)(Math.random()*10)-5;
+  }
 }
