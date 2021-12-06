@@ -1,8 +1,8 @@
 //your variable declarations here
 Star [] sues;
 Spaceship a;
-Asteroid boom;
-ArrayList <Asteroid> booms;
+ArrayList <Asteroid> booms = new ArrayList<Asteroid>();
+
 public void setup() 
 {
   size(600,600);
@@ -10,20 +10,11 @@ public void setup()
   for(int i = 0; i< sues.length; i++)
   sues[i] = new Star();
   a = new Spaceship();
-  
-  boom = new Asteroid();
-  booms = new ArrayList <Asteroid>();
-  //your code here
-  for(int i =0; i<11; i++){
-  booms.add(new Asteroid());
-   //Asteroid boom = booms.get(i);
-   boom.setYspeed();
-   boom.setXspeed();
-   boom.setAspeed();
-   boom.move();
-   boom.show();
+  for(int i = 0; i<7; i++){
+   booms.add(new Asteroid()); 
   }
-}
+  }
+
 
 public void draw() 
 {
@@ -43,11 +34,15 @@ public void draw()
   }
   }
   
-  boom.move();
+  
   a.move();
   for(int i = 0; i<sues.length;i++)
   sues[i].show();
   a.show();
-  boom.show();
+  for(int i = 0; i<booms.size(); i++){
+    noStroke();
+    booms.get(i).move();
+    booms.get(i).show();
+  }
   //your code here
 }
