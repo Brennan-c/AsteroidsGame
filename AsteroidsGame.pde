@@ -10,7 +10,7 @@ public void setup()
   for(int i = 0; i< sues.length; i++)
   sues[i] = new Star();
   a = new Spaceship();
-  for(int i = 0; i<7; i++){
+  for(int i = 0; i<9; i++){
    booms.add(new Asteroid()); 
   }
   }
