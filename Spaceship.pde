@@ -1,6 +1,6 @@
 class Spaceship extends Floater  
 {   
-  Spaceship()
+  private Spaceship()
   {
     myColor = color(256,256,256);
     corners = 13;
@@ -12,7 +12,7 @@ class Spaceship extends Floater
     myYspeed =0;
     myPointDirection =0;
   }
-  void hyperspace()
+  public void hyperspace()
   {
   myXspeed = 0;
   myYspeed = 0;
@@ -21,4 +21,3 @@ class Spaceship extends Floater
   myPointDirection = (int)(Math.random()*360);
   }
 }
-
