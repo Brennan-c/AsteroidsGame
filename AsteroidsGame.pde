@@ -43,6 +43,10 @@ public void draw()
     noStroke();
     booms.get(i).move();
     booms.get(i).show();
+    float d = dist((float)a.getX(),(float)a.getY(),(float)booms.get(i).getX(),(float)booms.get(i).getY());
+  if(d<25)
+  booms.remove(i);
   }
+  
   //your code here
 }
