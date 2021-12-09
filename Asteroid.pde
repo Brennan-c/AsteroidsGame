@@ -1,9 +1,8 @@
 class Asteroid extends Floater 
 {
   public double ASpeed;
-  public int assign;
 
-  private Asteroid() {
+  public Asteroid() {
     ASpeed = (int)(Math.random()*10)-5; 
     myColor = color(256, 256, 256);
     corners =6;
@@ -14,11 +13,12 @@ class Asteroid extends Floater
     myXspeed =(int)(Math.random()*6)-4;
     myYspeed =(int)(Math.random()*6)-4;
     myPointDirection =0;
-    assign = 0;
   }
   public void move() {
     turn(ASpeed);
     super.move();  
-
   }
+   public double getX(){return myCenterX;}
+    public double getY(){return myCenterY;}
   }
+  
